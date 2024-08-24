@@ -1,0 +1,21 @@
+body
+{
+    font-family: "Arial";
+    background-color: #000;
+    color: #FFF;
+}
+
+footer
+{
+    background-color: #FFF;
+    color: #000;
+}
+
+a
+{
+    color: skyblue;
+}
+a:visited
+{
+    color: lightskyblue;
+}
