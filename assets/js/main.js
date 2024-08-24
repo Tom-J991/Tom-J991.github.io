@@ -3,7 +3,7 @@ const defaultTheme = "theme_minimal";
 
 function setThemeSheet(theme)
 {
-    const themesDir = "/_assets/css/themes/";
+    const themesDir = "/assets/css/themes/";
     let selectedTheme;
     switch (theme)
     {
