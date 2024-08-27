@@ -34,17 +34,28 @@
         {
             text-align: center;
         }
+
         #page_image_wip
         {
             z-index: 300;
             --size-factor: 1;
             --size: calc(calc(100vw / calc(1920 / var(--size-factor))) * 574);
+            --aspect: calc(574 / 51);
             width: var(--size);
-            height: calc(var(--size) * 0.08885017421602787456445993031359); /* adjust for image aspect ratio */
+            height: calc(var(--size) / var(--aspect)); /* adjust for image aspect ratio */
             background-image: url("/assets/img/construction.gif");
             image-rendering: pixelated;
             image-rendering: -moz-crisp-edges;
             image-rendering: crisp-edges;
+        }
+
+        @media screen and (max-width: 810px)
+        {
+            #page_image_wip
+            {
+                --size: calc(calc(100vw / calc(768 / var(--size-factor))) * 574);
+                image-rendering: auto;
+            }
         }
     </style>
 </head>
@@ -54,9 +65,9 @@
             <h1>Thomas Jackson's Website</h1>
         </header>
         <nav>
-            <a href="/">Home</a> |
-            <a href="#"><strong>Portfolio</strong></a> |
-            <a href="/contact.html">Contact</a> |
+            <span><a href="/">Home</a> |</span>
+            <span><a href="#"><strong>Portfolio</strong></a> |</span>
+            <span><a href="/contact.html">Contact</a> |</span>
         </nav>
         <main>
             <article>

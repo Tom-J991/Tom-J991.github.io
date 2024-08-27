@@ -32,6 +32,15 @@
             height: calc(25vw);
             background-image: url("/assets/img/photo.jpg");
         }
+
+        @media screen and (max-width: 810px)
+        {
+            #page_image_photo
+            {
+                width: calc(50vw);
+                height: calc(50vw);
+            }
+        }
     </style>
 </head>
 <body>
@@ -40,9 +49,9 @@
             <h1>Thomas Jackson's Website</h1>
         </header>
         <nav>
-            <a href="#"><strong>Home</strong></a> |
-            <a href="/portfolio.html">Portfolio</a> |
-            <a href="/contact.html">Contact</a> |
+            <span><a href="#"><strong>Home</strong></a> |</span>
+            <span><a href="/portfolio.html">Portfolio</a> |</span>
+            <span><a href="/contact.html">Contact</a> |</span>
         </nav>
         <main>
             <article>
