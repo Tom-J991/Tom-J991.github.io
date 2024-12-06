@@ -1,46 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Site created by Thomas Jackson, © 2024. -->
 <head>
     <title>Thomas Jackson's Website</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="description" content="The portfolio of Thomas Jackson, a programmer from Adelaide, South Australia.">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Thomas Jackson's Website">
-    <meta property="og:description" content="The portfolio of Thomas Jackson, a programmer from Adelaide, South Australia.">
+    <meta property="og:description" content="The portfolio of Thomas Jackson, a Game Programmer from Adelaide, South Australia.">
     <meta property="og:url" content="https://thomasjackson.dev/index.html">
     <meta property="og:image" content="https://thomasjackson.dev/assets/img/photo.jpg">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Thomas Jackson's Website">
-    <meta name="twitter:description" content="The portfolio of Thomas Jackson, a programmer from Adelaide, South Australia.">
+    <meta name="twitter:description" content="The portfolio of Thomas Jackson, a Game Programmer from Adelaide, South Australia.">
     <meta name="twitter:image" content="https://thomasjackson.dev/assets/img/photo.jpg">
     <meta name="twitter:image:alt" content="A preview image of https://thomasjackson.dev/">
 
-    <script type="application/javascript" src="/assets/js/main.js"></script>
+    <script type="application/javascript" src="./assets/js/main.js"></script>
 
-    <link id="site_layout_sheet" rel="stylesheet" href="/assets/css/stylesheet.css">
-    <link id="site_theme_sheet" rel="stylesheet" href="/assets/css/themes/minimal.css">
+    <link id="site_layout_sheet" rel="stylesheet" type="text/css" href="./assets/css/stylesheet.css">
+    <link id="site_theme_sheet" rel="stylesheet" type="text/css" href="./assets/css/themes/minimal.css">
     <style id="site_page_style" type="text/css">
-        #page_image_photo
-        {
-            z-index: 300;
-            width: calc(25vw);
-            height: calc(25vw);
-            background-image: url("/assets/img/photo.jpg");
-        }
-
-        @media screen and (max-width: 810px)
-        {
-            #page_image_photo
-            {
-                width: calc(50vw);
-                height: calc(50vw);
-            }
-        }
     </style>
 </head>
 <body>
@@ -50,14 +35,28 @@
         </header>
         <nav>
             <span><a href="#"><strong>Home</strong></a> |</span>
-            <span><a href="/portfolio.html">Portfolio</a> |</span>
-            <span><a href="/contact.html">Contact</a> |</span>
+            <span><a href="./portfolio.html">Portfolio</a> |</span>
+            <span><a href="./contact.html">Contact</a> |</span>
         </nav>
         <main>
             <article>
                 <section>
                     <figure>
-                        <div class="site_image" id="page_image_photo"></div>
+						<picture class="site_image">
+							<!-- TODO: Add WebP, or AVIF as <source> -->
+							<!-- TODO: Different size image srcset. -->
+							<img 
+								src="./assets/img/photo.jpg" 
+								alt="A photo of me." 
+								sizes="(max-width:512px) 100vw, 512px"
+								style="max-width:25vw;aspect-ratio:1/1;"
+								type="image/jpeg" 
+								fetchpriority="high" 
+								loading="lazy" 
+								decoding="async" 
+								draggable="false" 
+							/>
+						</picture>
                         <figcaption>Hi, this is me!</figcaption>
                     </figure>
                 </section>
@@ -81,7 +80,6 @@
         </main>
         <footer>
             <p id="site_copyright">© <span id="site_copyright_date"></span> <a href="mailto:thomasj.gamedev@gmail.com">Thomas Jackson</a>. All rights reserved.</p>
-
             <div id="site_theme_container">
                 <label>Site Theme:</label>
                 <select name="site_theme" id="site_theme_selector">

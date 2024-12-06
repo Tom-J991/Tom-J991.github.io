@@ -1,61 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Site created by Thomas Jackson, © 2024. -->
 <head>
     <title>Thomas Jackson's Website | Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="description" content="The portfolio of Thomas Jackson, a programmer from Adelaide, South Australia.">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Thomas Jackson's Website">
-    <meta property="og:description" content="The portfolio of Thomas Jackson, a programmer from Adelaide, South Australia.">
+    <meta property="og:description" content="The portfolio of Thomas Jackson, a Game Programmer from Adelaide, South Australia.">
     <meta property="og:url" content="https://thomasjackson.dev/index.html">
     <meta property="og:image" content="https://thomasjackson.dev/assets/img/photo.jpg">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Thomas Jackson's Website">
-    <meta name="twitter:description" content="The portfolio of Thomas Jackson, a programmer from Adelaide, South Australia.">
+    <meta name="twitter:description" content="The portfolio of Thomas Jackson, a Game Programmer from Adelaide, South Australia.">
     <meta name="twitter:image" content="https://thomasjackson.dev/assets/img/photo.jpg">
     <meta name="twitter:image:alt" content="A preview image of https://thomasjackson.dev/">
 
-    <script type="application/javascript" src="/assets/js/main.js"></script>
+    <script type="application/javascript" src="./assets/js/main.js"></script>
 
-    <link id="site_layout_sheet" rel="stylesheet" href="/assets/css/stylesheet.css">
-    <link id="site_theme_sheet" rel="stylesheet" href="/assets/css/themes/minimal.css">
+    <link id="site_layout_sheet" rel="stylesheet" type="text/css" href="./assets/css/stylesheet.css">
+    <link id="site_theme_sheet" rel="stylesheet" type="text/css" href="./assets/css/themes/minimal.css">
     <style id="site_page_style" type="text/css">
-        section
-        {
-            border: thin solid;
-            padding: 1rem;
-        }
-        section > p
-        {
-            text-align: center;
-        }
-
-        #page_image_wip
-        {
-            z-index: 300;
-            --size-factor: 1;
-            --size: calc(calc(100vw / calc(1920 / var(--size-factor))) * 574);
-            --aspect: calc(574 / 51);
-            width: var(--size);
-            height: calc(var(--size) / var(--aspect)); /* adjust for image aspect ratio */
-            background-image: url("/assets/img/construction.gif");
-            image-rendering: pixelated;
-            image-rendering: -moz-crisp-edges;
-            image-rendering: crisp-edges;
-        }
-
-        @media screen and (max-width: 810px)
-        {
-            #page_image_wip
-            {
-                --size: calc(calc(100vw / calc(768 / var(--size-factor))) * 574);
-                image-rendering: auto;
-            }
+		article { min-width: 70vw; margin: 0 10vw 0 10vw; justify-content: space-evenly; }
+		section { max-width: calc(70vw / 2); border: thin solid; padding: 1rem; }
+		section > p { text-align: justify; text-justify: auto; }
+		section > h1 { text-align: center; text-decoration: underline; }
+		section > table { position: relative; left: 50%; transform: translateX(-50%); width: 50%; height: auto; }
+		section > table, th, td { text-align: center; border: thin solid black; border-collapse: collapse; }
+		<!-- Phone Layout -->
+        @media screen and (max-width: 768px) {
+			article { min-width: auto; width: auto; margin: 0; }
+			section { max-width: 70vw; }
         }
     </style>
 </head>
@@ -65,22 +45,123 @@
             <h1>Thomas Jackson's Website</h1>
         </header>
         <nav>
-            <span><a href="/">Home</a> |</span>
+            <span><a href="./index.html">Home</a> |</span>
             <span><a href="#"><strong>Portfolio</strong></a> |</span>
-            <span><a href="/contact.html">Contact</a> |</span>
+            <span><a href="./contact.html">Contact</a> |</span>
         </nav>
         <main>
+			<article>
+				<section>
+					<h1>OpenGL Engine</h1>
+					<nav>
+						<span><a href="https://github.com/Tom-J991/OpenGL-APP">GitHub</a> |</span>
+						<span><a href="#">Video</a> |</span>
+					</nav>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</section>
+				<section>
+					<h1>BCNet</h1>
+					<nav>
+						<span><a href="https://github.com/Tom-J991/BCNet">GitHub</a> |</span>
+						<span><a href="#">Video</a> |</span>
+					</nav>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</section>
+			</article>
+			<article>
+				<section>
+					<h1>Physics Engine</h1>
+					<nav>
+						<span><a href="https://github.com/Tom-J991/Physics-Engine">GitHub</a> |</span>
+						<span><a href="#">Video</a> |</span>
+						<span><a href="#">Release Build</a> |</span>
+					</nav>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</section>
+				<section>
+					<h1>Retro Games Gallery</h1>
+					<nav>
+						<span><a href="https://github.com/Tom-J991/AIE-Cpp-Projects">GitHub</a> |</span>
+						<span><a href="#">Video</a> |</span>
+						<span><a href="#">Release Build</a> |</span>
+					</nav>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</section>
+			</article>
+			<article>
+				<section>
+					<h1>The Calling</h1>
+					<nav>
+						<span><a href="https://github.com/PsychicHavocTV/AIEGameProduction2023">GitHub</a> |</span>
+						<span><a href="#">Video</a> |</span>
+						<span><a href="#">Release Build</a> |</span>
+					</nav>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</section>
+				<section>
+					<h1>WizzBizz</h1>
+					<nav>
+						<span><a href="https://github.com/AIE-Team3-Year2-2024/WizzBizz">GitHub</a> |</span>
+						<span><a href="#">Video</a> |</span>
+						<span><a href="#">Release Build</a> |</span>
+					</nav>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</section>
+			</article>
             <article>
                 <section>
                     <h1>Hi, this page is still being worked on.</h1>
-                    <p>Please check again soon.</p>
-                    <div class="site_image" id="page_image_wip"></div>
+                    <p style="text-align:center;">Please check again soon.</p>
+                    <picture class="site_image site_image_style_pixel">
+						<!-- TODO: Add WebP, or AVIF as <source> -->
+						<!-- TODO: Different size image srcset. -->
+						<img 
+							src="./assets/img/construction.gif" 
+							alt="An animated illustration stating that the website is under construction." 
+							sizes="(max-width:574px) 100vw, 574px"
+							style="max-width:100%;aspect-ratio:51/574;"
+							type="image/gif" 
+							fetchpriority="high" 
+							loading="lazy" 
+							decoding="async" 
+							draggable="false" 
+						/>
+					</picture>
                 </section>
             </article>
         </main>
         <footer>
             <p id="site_copyright">© <span id="site_copyright_date"></span> <a href="mailto:thomasj.gamedev@gmail.com">Thomas Jackson</a>. All rights reserved.</p>
-
             <div id="site_theme_container">
                 <label>Site Theme:</label>
                 <select name="site_theme" id="site_theme_selector">
