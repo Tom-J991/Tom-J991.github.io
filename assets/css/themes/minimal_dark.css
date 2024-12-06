@@ -11,8 +11,17 @@ footer {
 
 a {
     color: skyblue;
-	
 	&:visited {
 		color: lightskyblue;
 	}
+}
+
+#site_container > header {
+	border-bottom: thin solid white;
+}
+#site_container > footer {
+	border-top: thin solid white;
+}
+#site_container > nav {
+	border-bottom: thin solid white;
 }
