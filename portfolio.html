@@ -22,6 +22,11 @@
     <meta name="twitter:image:alt" content="A preview image of https://thomasjackson.dev/">
 
     <script type="application/javascript" src="./assets/js/main.js"></script>
+	<script type="application/javascript">
+		function wipLink() {
+			alert("Remind me to add this.");
+		}
+	</script>
 
     <link id="site_layout_sheet" rel="stylesheet" type="text/css" href="./assets/css/stylesheet.css">
     <link id="site_theme_sheet" rel="stylesheet" type="text/css" href="./assets/css/themes/minimal.css">
@@ -30,8 +35,9 @@
 		section { max-width: calc(70vw / 2); border: thin solid; padding: 1rem; }
 		section > p { text-align: justify; text-justify: auto; }
 		section > h1 { text-align: center; text-decoration: underline; }
-		section > table { position: relative; left: 50%; transform: translateX(-50%); width: 50%; height: auto; }
-		section > table, th, td { text-align: center; border: thin solid black; border-collapse: collapse; }
+		section > table { position: relative; left: 50%; transform: translateX(-50%); width: auto; height: auto; }
+		section > table, tr { height: auto; }
+		section > table, th, td { text-align: center; border: thin solid black; border-collapse: collapse; padding: 0.5rem; }
 		<!-- Phone Layout -->
         @media screen and (max-width: 768px) {
 			article { min-width: auto; width: auto; margin: 0; }
@@ -55,27 +61,90 @@
 					<h1>OpenGL Engine</h1>
 					<nav>
 						<span><a href="https://github.com/Tom-J991/OpenGL-APP">GitHub</a> |</span>
-						<span><a href="#">Video</a> |</span>
 					</nav>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						This is a project I worked on in my second year at AIE during the course's computer graphics module.
+						</br>
+						This is a barebones OpenGL C++ rendering engine, focusing on learning the fundamentals of 3D rendering techniques and engine architecture.
+						<br/>
+						What I ended up with was a rendering engine that supported: renderining primitives, rendering meshes from file, basic shaders, basic direct lighting using phong shading,
+						normal mapping, direct PBR lighting using oren-nayar and cook-torrance shading models, basic key frame animation in an object hierarchy (not skinned meshes), 
+						virtual cameras using render targets, particle systems (broken billboarding), development UI using ImGUI to interact with the scene.
 					</p>
+					<table>
+					<tr>
+						<td>
+							<!-- TODO: Add WebP, or AVIF as <source> -->
+							<!-- TODO: Different size image srcset. -->
+							<picture class="site_image">
+								<img 
+									src="./assets/img/portfolio/opengl.png" 
+									alt="A screenshot showcasing my OpenGL engine." 
+									sizes="(max-width:672px) 100vw, 672px"
+									style="max-width:100%;aspect-ratio:672/378;"
+									type="image/jpeg" 
+									fetchpriority="high" 
+									loading="lazy" 
+									decoding="async" 
+									draggable="false" 
+								/>
+							</picture>
+						</td>
+					</tr>
+					</table>
+					<p><strong>Third Party Libraries/Packages used:</strong> GLFW, glad, glm, stb_image.h, assimp, imgui</p>
 				</section>
 				<section>
 					<h1>BCNet</h1>
 					<nav>
 						<span><a href="https://github.com/Tom-J991/BCNet">GitHub</a> |</span>
-						<span><a href="#">Video</a> |</span>
 					</nav>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						This is a C++ library I worked on for the complex game systems module at my second year of AIE, focused on writing a modular library for games.
+						</br>
+						With this project I wrote a generalized high-level networking library utilizing Valve's GameNetworkingSockets to handle the low level networking.
+						<br/>
+						As a small demo to demonstrate the library, I worked on a clone of Pong allowing for a two player game over a network.
 					</p>
+					<table>
+					<tr>
+						<td>
+							<!-- TODO: Add WebP, or AVIF as <source> -->
+							<!-- TODO: Different size image srcset. -->
+							<picture class="site_image">
+								<img 
+									src="./assets/img/portfolio/bcnet1.png" 
+									alt="A screenshot showcasing the connection screen of my client utilizing BCNet." 
+									sizes="(max-width:320px) 100vw, 320px"
+									style="max-width:100%;aspect-ratio:320/252;"
+									type="image/png" 
+									fetchpriority="high" 
+									loading="lazy" 
+									decoding="async" 
+									draggable="false" 
+								/>
+							</picture>
+						</td>
+						<td>
+							<!-- TODO: Add WebP, or AVIF as <source> -->
+							<!-- TODO: Different size image srcset. -->
+							<picture class="site_image">
+								<img 
+									src="./assets/img/portfolio/bcnet2.png" 
+									alt="A screenshot showcasing a small pong game built with my BCNet library." 
+									sizes="(max-width:320px) 100vw, 320px"
+									style="max-width:100%;aspect-ratio:320/252;"
+									type="image/png" 
+									fetchpriority="high" 
+									loading="lazy" 
+									decoding="async" 
+									draggable="false" 
+								/>
+							</picture>
+						</td>
+					</tr>
+					</table>
+					<p><strong>Third Party Libraries/Packages used:</strong> Raylib, GameNetworkingSockets</p>
 				</section>
 			</article>
 			<article>
@@ -83,29 +152,130 @@
 					<h1>Physics Engine</h1>
 					<nav>
 						<span><a href="https://github.com/Tom-J991/Physics-Engine">GitHub</a> |</span>
-						<span><a href="#">Video</a> |</span>
-						<span><a href="#">Release Build</a> |</span>
+						<span><a href="#" onclick="wipLink()">Video</a> |</span>
 					</nav>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						This is a basic physics engine I worked on using C++ for AIE's physics module during my second year.
+						</br>
+						This project focused on learning the basic systems and theory behind a 2D physics engines implementing the concepts and mathematics behind Newtonian physics,
+						including the laws of motions, linear forces, and momentum. As it is a physics engine it also contains systems and logic for handling collision detection between different collider primitives.
+						<br/>
+						As a small demonstration I created a setup which looks like a Pool table, allowing you to throw the billiards around using the physics bodies and watch as they interact with eachother.
+						Unfortunately, I could not create the complete Pool game within the time I had to develop it, as much as I wanted to.
 					</p>
+					<table>
+					<tr>
+						<td>
+							<!-- TODO: Add WebP, or AVIF as <source> -->
+							<!-- TODO: Different size image srcset. -->
+							<picture class="site_image">
+								<img 
+									src="./assets/img/portfolio/physics.png" 
+									alt="A screenshot showcasing my Physics engine." 
+									sizes="(max-width:672px) 100vw, 672px"
+									style="max-width:100%;aspect-ratio:672/378;"
+									type="image/png" 
+									fetchpriority="high" 
+									loading="lazy" 
+									decoding="async" 
+									draggable="false" 
+								/>
+							</picture>
+						</td>
+					</tr>
+					</table>
+					<p><strong>Third Party Libraries/Packages used:</strong> aieBootstrap, FMOD</p>
 				</section>
 				<section>
 					<h1>Retro Games Gallery</h1>
 					<nav>
 						<span><a href="https://github.com/Tom-J991/AIE-Cpp-Projects">GitHub</a> |</span>
-						<span><a href="#">Video</a> |</span>
-						<span><a href="#">Release Build</a> |</span>
+						<span><a href="#" onclick="wipLink()">Video</a> |</span>
+						<span><a href="#" onclick="wipLink()">Release Build</a> |</span>
 					</nav>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						During my first year at AIE, I created a game meant to practice C++ programming using the Raylib game framework.
+						It quickly evolved into a somewhat larger project featuring a fully custom menu system with seamless transitions and two basic games.
+						<br/>
+						I ended up implementing both Pong and Snake, Pong containing a two player versus mode and an AI versus mode.
+						</br>
+						I wanted to implement more games but ran out of time due to focusing on the menu system.
 					</p>
+					<table>
+					<tr>
+						<td>
+							<!-- TODO: Add WebP, or AVIF as <source> -->
+							<!-- TODO: Different size image srcset. -->
+							<picture class="site_image">
+								<img 
+									src="./assets/img/portfolio/retrogame1.png" 
+									alt="A screenshot showcasing the main menu of Retro Games Gallery." 
+									sizes="(max-width:318px) 100vw, 318px"
+									style="max-width:100%;aspect-ratio:318/238;"
+									type="image/png" 
+									fetchpriority="high" 
+									loading="lazy" 
+									decoding="async" 
+									draggable="false" 
+								/>
+							</picture>
+						</td>
+						<td>
+							<!-- TODO: Add WebP, or AVIF as <source> -->
+							<!-- TODO: Different size image srcset. -->
+							<picture class="site_image">
+								<img 
+									src="./assets/img/portfolio/retrogame2.png" 
+									alt="A screenshot showcasing the game selection menu of Retro Games Gallery." 
+									sizes="(max-width:318px) 100vw, 318px"
+									style="max-width:100%;aspect-ratio:318/238;"
+									type="image/png" 
+									fetchpriority="high" 
+									loading="lazy" 
+									decoding="async" 
+									draggable="false" 
+								/>
+							</picture>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<!-- TODO: Add WebP, or AVIF as <source> -->
+							<!-- TODO: Different size image srcset. -->
+							<picture class="site_image">
+								<img 
+									src="./assets/img/portfolio/retrogame3.png" 
+									alt="A screenshot showcasing the Pong game of Retro Games Gallery." 
+									sizes="(max-width:318px) 100vw, 318px"
+									style="max-width:100%;aspect-ratio:318/238;"
+									type="image/png" 
+									fetchpriority="high" 
+									loading="lazy" 
+									decoding="async" 
+									draggable="false" 
+								/>
+							</picture>
+						</td>
+						<td>
+							<!-- TODO: Add WebP, or AVIF as <source> -->
+							<!-- TODO: Different size image srcset. -->
+							<picture class="site_image">
+								<img 
+									src="./assets/img/portfolio/retrogame4.png" 
+									alt="A screenshot showcasing the Snake game of Retro Games Gallery." 
+									sizes="(max-width:318px) 100vw, 318px"
+									style="max-width:100%;aspect-ratio:318/238;"
+									type="image/png" 
+									fetchpriority="high" 
+									loading="lazy" 
+									decoding="async" 
+									draggable="false" 
+								/>
+							</picture>
+						</td>
+					</tr>
+					</table>
+					<p><strong>Third Party Libraries/Packages used:</strong> Raylib</p>
 				</section>
 			</article>
 			<article>
@@ -113,29 +283,238 @@
 					<h1>The Calling</h1>
 					<nav>
 						<span><a href="https://github.com/PsychicHavocTV/AIEGameProduction2023">GitHub</a> |</span>
-						<span><a href="#">Video</a> |</span>
-						<span><a href="#">Release Build</a> |</span>
+						<span><a href="#" onclick="wipLink()">Video</a> |</span>
+						<span><a href="#" onclick="wipLink()">Release Build</a> |</span>
 					</nav>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						The Calling is a horror game made in Unity, which I helped develop for my first Major Production during my first year at AIE. Which we worked on for about 6 weeks.
+						<br/>
+						I was one of the game programmers alongside the lead programmer.
+						<br/>
+						The premise of The Calling is to gather evidence of a Wendigo creature that stalks within the forest, you must avoid a deadly fate from the creature by hiding within tents or bushes.
+						</br>
+						To gather evidence as required by the objectives list, you must left click which takes a photo of the evidence indicated by a short flash and a sound effect.
 					</p>
+					<table>
+					<tr>
+						<td>
+							<!-- TODO: Add WebP, or AVIF as <source> -->
+							<!-- TODO: Different size image srcset. -->
+							<picture class="site_image">
+								<img 
+									src="./assets/img/portfolio/thecalling1.jpg" 
+									alt="A screenshot showcasing the Wendigo creature within the forest environment in The Calling." 
+									sizes="(max-width:729px) 100vw, 729px"
+									style="max-width:100%;aspect-ratio:729/410;"
+									type="image/jpeg" 
+									fetchpriority="high" 
+									loading="lazy" 
+									decoding="async" 
+									draggable="false" 
+								/>
+							</picture>
+						</td>
+						<td>
+							<!-- TODO: Add WebP, or AVIF as <source> -->
+							<!-- TODO: Different size image srcset. -->
+							<picture class="site_image">
+								<img 
+									src="./assets/img/portfolio/thecalling2.jpg" 
+									alt="A screenshot showcasing the save points in The Calling." 
+									sizes="(max-width:729px) 100vw, 729px"
+									style="max-width:100%;aspect-ratio:729/410;"
+									type="image/jpeg" 
+									fetchpriority="high" 
+									loading="lazy" 
+									decoding="async" 
+									draggable="false" 
+								/>
+							</picture>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<!-- TODO: Add WebP, or AVIF as <source> -->
+							<!-- TODO: Different size image srcset. -->
+							<picture class="site_image">
+								<img 
+									src="./assets/img/portfolio/thecalling3.jpg" 
+									alt="A screenshot showcasing one of the camp sites in The Calling." 
+									sizes="(max-width:729px) 100vw, 729px"
+									style="max-width:100%;aspect-ratio:729/410;"
+									type="image/jpeg" 
+									fetchpriority="high" 
+									loading="lazy" 
+									decoding="async" 
+									draggable="false" 
+								/>
+							</picture>
+						</td>
+						<td>
+							<!-- TODO: Add WebP, or AVIF as <source> -->
+							<!-- TODO: Different size image srcset. -->
+							<picture class="site_image">
+								<img 
+									src="./assets/img/portfolio/thecalling4.jpg" 
+									alt="A screenshot showcasing the abandoned cabin in The Calling." 
+									sizes="(max-width:729px) 100vw, 729px"
+									style="max-width:100%;aspect-ratio:729/410;"
+									type="image/jpeg" 
+									fetchpriority="high" 
+									loading="lazy" 
+									decoding="async" 
+									draggable="false" 
+								/>
+							</picture>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<!-- TODO: Add WebP, or AVIF as <source> -->
+							<!-- TODO: Different size image srcset. -->
+							<picture class="site_image">
+								<img 
+									src="./assets/img/portfolio/thecalling5.jpg" 
+									alt="A screenshot showcasing the scary tree in The Calling." 
+									sizes="(max-width:729px) 100vw, 729px"
+									style="max-width:100%;aspect-ratio:729/410;"
+									type="image/jpeg" 
+									fetchpriority="high" 
+									loading="lazy" 
+									decoding="async" 
+									draggable="false" 
+								/>
+							</picture>
+						</td>
+						<td>
+							<!-- TODO: Add WebP, or AVIF as <source> -->
+							<!-- TODO: Different size image srcset. -->
+							<picture class="site_image">
+								<img 
+									src="./assets/img/portfolio/thecalling6.jpg" 
+									alt="A screenshot showcasing a closeup of the Wendigo in The Calling." 
+									sizes="(max-width:729px) 100vw, 729px"
+									style="max-width:100%;aspect-ratio:729/410;"
+									type="image/jpeg" 
+									fetchpriority="high" 
+									loading="lazy" 
+									decoding="async" 
+									draggable="false" 
+								/>
+							</picture>
+						</td>
+					</tr>
+					</table>
+					<p>
+						I developed the objectives system which integrated with the Fungus unity package, as well as over-engineering a method of detecting whether the current objective's evidence is visible on screen.
+						</br>
+						One idea for the game initially was that good evidence would be determined by comparing how much of it is within the screen when you take a photo to a configured threshold.
+						</br>
+						The system I developed ended up using a custom render pass and a compute shader to create a black and white mask of the evidence on screen, and using that to calculate how much area it takes up within the screen's resolution.
+						This never ended up getting utilized as the idea was scrapped afterwards, but it's pretty cool.
+						</br>
+						The screenshots below showcase the normal game view and the custom render pass with the "evidence mask".
+					</p>
+					<table>
+					<tr>
+						<td>
+							<!-- TODO: Add WebP, or AVIF as <source> -->
+							<!-- TODO: Different size image srcset. -->
+							<picture class="site_image">
+								<img 
+									src="./assets/img/portfolio/thecalling_dev1.png" 
+									alt="A screenshot showcasing the normal view of the game." 
+									sizes="(max-width:320px) 100vw, 320px"
+									style="max-width:100%;aspect-ratio:320/197;"
+									type="image/png" 
+									fetchpriority="high" 
+									loading="lazy" 
+									decoding="async" 
+									draggable="false" 
+								/>
+							</picture>
+						</td>
+						<td>
+							<!-- TODO: Add WebP, or AVIF as <source> -->
+							<!-- TODO: Different size image srcset. -->
+							<picture class="site_image">
+								<img 
+									src="./assets/img/portfolio/thecalling_dev2.png" 
+									alt="A screenshot showcasing the custom visibility mask calculated for 'evidence'" 
+									sizes="(max-width:320px) 100vw, 320px"
+									style="max-width:100%;aspect-ratio:320/197;"
+									type="image/png" 
+									fetchpriority="high" 
+									loading="lazy" 
+									decoding="async" 
+									draggable="false" 
+								/>
+							</picture>
+						</td>
+					</tr>
+					</table>
+					<p><strong>Third Party Libraries/Packages used:</strong> Fungus</p>
 				</section>
 				<section>
 					<h1>WizzBizz</h1>
 					<nav>
 						<span><a href="https://github.com/AIE-Team3-Year2-2024/WizzBizz">GitHub</a> |</span>
-						<span><a href="#">Video</a> |</span>
-						<span><a href="#">Release Build</a> |</span>
+						<span><a href="#" onclick="wipLink()">Video</a> |</span>
+						<span><a href="https://wizened-wizards.itch.io/wizz-bizz">Release Build</a> |</span>
 					</nav>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						WizzBizz is a Unity Project that I helped developed for Major Production during my second year at AIE, which spanned from the end of July up until early December.
+						I was one of two game programmers where I was the lead programmer.
+						</br>
+						The game is a casual couch multiplayer action-party game, similar to games such as Boomerang Fu. It initially started off as a spin on dodge ball but evolved into more of it's own thing.
+						Players control up to four characters who each have unique abilities and compete in an arena setting. There's a free for all mode and a team versus mode, both having the goal of defeating the opposing players.
+						To do so, players can use their abilities or use the "Orbs" which spawn around the arena and allow the player to use a more powerful attack.
+						</br>
+						The game primarily uses controllers for input, utilizing Unity's new Input System to do so.
+						</br>
+						I helped develop the overall gameplay and systems, the largest one being the UI menu system. The game idea I wouldn't consider very technically challenging or complex.
 					</p>
+					<table>
+					<tr>
+						<td>
+							<!-- TODO: Add WebP, or AVIF as <source> -->
+							<!-- TODO: Different size image srcset. -->
+							<picture class="site_image">
+								<img 
+									src="./assets/img/portfolio/wizzbizz1.png" 
+									alt="A screenshot showcasing some gameplay in WizzBizz." 
+									sizes="(max-width:604px) 100vw, 604px"
+									style="max-width:100%;aspect-ratio:604/338;"
+									type="image/png" 
+									fetchpriority="high" 
+									loading="lazy" 
+									decoding="async" 
+									draggable="false" 
+								/>
+							</picture>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<!-- TODO: Add WebP, or AVIF as <source> -->
+							<!-- TODO: Different size image srcset. -->
+							<picture class="site_image">
+								<img 
+									src="./assets/img/portfolio/wizzbizz2.png" 
+									alt="A screenshot showcasing some gameplay in WizzBizz." 
+									sizes="(max-width:604px) 100vw, 604px"
+									style="max-width:100%;aspect-ratio:604/338;"
+									type="image/png" 
+									fetchpriority="high" 
+									loading="lazy" 
+									decoding="async" 
+									draggable="false" 
+								/>
+							</picture>
+						</td>
+					</tr>
+					</table>
+					<p><strong>Third Party Libraries/Packages used:</strong> Surge</p>
 				</section>
 			</article>
             <article>
